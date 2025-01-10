@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3 # Make sure to use the latest version available
         
-      - name: Assign issue to @zhuzxmas
-        run: gh issue edit ${{ github.event.issue.number }} --add-assignee @zhuzxmas
+      - name: Assign issue to zhuzxmas
+        run: gh issue edit ${{ github.event.issue.number }} --add-assignee zhuzxmas
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
