@@ -1,0 +1,14 @@
+name: Auto-assign Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  auto_assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign issue to @zhuzxmas
+        run: gh issue edit ${{ github.event.issue.number }} --add-assignee @zhuzxmas
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
